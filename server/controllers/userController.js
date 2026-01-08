@@ -4,25 +4,48 @@ import User from "../models/User.js"
 import {v2 as cloudinary} from "cloudinary"
 
 
-// Get User Data
+// // Get User Data
+// export const getUserData = async (req, res) => {
+   
+
+//       const userId = req.auth.userId
+
+//       try {
+
+//          const user = await User.findById(userId)
+         
+
+//          if(!user) {
+//             return res.json({ success: false, message: "User Not Found"})
+//          }
+
+//          res.json({success: true, user})
+         
+//       } catch (error) {
+//           res.json({success:false, message: error.message})
+//       }
+// } 
+
 export const getUserData = async (req, res) => {
+  try {
 
-      const userId = req.auth.userId
+    const userId = req.auth.userId;
 
-      try {
+    const user = await User.findById(userId);
 
-         const user = await User.findById(userId)
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User Not Found",
+      });
+    }
 
-         if(!user) {
-            return res.json({ success: false, message: "User Not Found"})
-         }
+    res.json({ success: true, user });
+  } catch (error) {
+    res.json({ success: false, message: error.message });
+  }
+};
 
-         res.json({success: true, user})
-        
-      } catch (error) {
-          res.json({success:false, message: error.message})
-      }
-} 
 
 // Apply for a job
 export const applyForJob = async (req, res) => {

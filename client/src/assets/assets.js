@@ -89,7 +89,10 @@ export const JobLocations = [
     "Mumbai",
     "California",
     "Chennai",
-    "New York"
+    "New York",
+    "Noida",
+    "Delhi",
+    "Lucknow"
 ]
 
 // Sample data for Manage Jobs Page
@@ -719,7 +722,7 @@ export const jobsData = [
     {
         _id: '18',
         title: "Human Resources Specialist",
-        location: "Washington",
+        location: "Noida",
         level: "Intermediate Level",
         companyId: {
             "_id": "670e4d25ca9fda8f1bf359b9",

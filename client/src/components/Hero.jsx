@@ -23,7 +23,7 @@ const Hero = () => {
     <div className="container 2xl:px-20 mx-auto my-10">
       <div className="bg-linear-to-r from-purple-900  to-purple-600 text-white py-16 text-center mx-2 rounded-xl">
         <h2 className="text-2xl md-text-3xl lg:text-4xl font-medium mb-4">Over 10000+ jobs to apply </h2>
-        <p className="mb-8 mx-w-xl mx-auto text-sm font-light px-5 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque deleniti ex odio! Suscipit accusantium quod cum. </p>
+        <p className="mb-8 mx-w-xl mx-auto text-sm font-light px-5 "> </p>
         <div className="flex items-center justify-between bg-white rounded text-gray-500 max-w-xl pl-4 mx-4 sm:mx-auto">
           <div className="flex items-center">
               <img className="h-4 sm:h-5" src={assets.search_icon} alt="" />
